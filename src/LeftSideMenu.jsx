@@ -10,13 +10,13 @@ class LeftSideMenu extends React.Component {
        <nav className="hidden-xs-down bg-faded sidebar">
           <ul className="nav flex-column">
             <li className="nav-item">
-              <a className="nav-link" href="#">Home</a>
+              <a className="nav-link" href="/home">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Contact US</a>
+              <a className="nav-link" href="/contactus">Contact US</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">About US</a>
+              <a className="nav-link" href="/aboutus">About US</a>
             </li>
           </ul>
         </nav>

@@ -9,7 +9,7 @@ class UserDetails extends React.Component {
       var userlist = this.props.topDownrows;
       if(userlist.length > 0){
         // Table Header
-        var dataColumns = [{'first_name': 'First Name', 'last_name':'Last Name','phone':'Phone','email':'Email','address':'Address'}];  
+        var dataColumns = [{'first_name': 'First Name', 'last_name':'Last Name','phone':'Phone','email':'Email','address':'Address', 'city':'City'}];  
         // Table Row Data
         var dataRows = userlist;
         // Render Header      
@@ -18,7 +18,7 @@ class UserDetails extends React.Component {
             <tr key={index}>
               <th>{column.first_name}</th><th>{column.last_name}</th>
               <th>{column.phone}</th><th>{column.email}</th>
-              <th>{column.address}</th>
+              <th>{column.address}</th><th>{column.city}</th>
             </tr>
             )
           })
@@ -31,6 +31,7 @@ class UserDetails extends React.Component {
                     <td>{row.phone ? row.phone: '-'}</td>
                     <td>{row.email ? row.email: '-'}</td>
                     <td>{row.address ? row.address: '-'}</td>
+                    <td>{row.city ? row.city: '-'}</td>
                   </tr>
                   ) 
         });

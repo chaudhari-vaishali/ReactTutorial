@@ -10,7 +10,7 @@ import UserDetails from './UserDetails.jsx';
 class App extends Component {
   constructor(props) {
       super(props);
-      this.state = {formData:{first_name:'', last_name:'', phone:'', email:'', address:''}, formsData:[]};
+      this.state = {formData:{first_name:'', last_name:'', phone:'', email:'', address:'', city:''}, formsData:[]};
       this.checkUserUpdate.bind(this);
       this.updateDetails.bind(this);
   }
