@@ -4,6 +4,7 @@ import './App.css';
 class UserDetails extends React.Component {
   render(){
     // console.log("in appdetails: ",this.props.topDownrows);
+
     // Check userlist status.
     if(this.props.topDownrows){
       var userlist = this.props.topDownrows;
@@ -39,6 +40,7 @@ class UserDetails extends React.Component {
     }
     // Decorate with Bootstrap CSS
     return (
+      <div><h1> In details</h1>
       <table className="table table-bordered table-hover" width="100%">
         <thead>
           {tableHeader}
@@ -47,6 +49,7 @@ class UserDetails extends React.Component {
           {tableBody}
         </tbody>
       </table>
+      </div>
     );
   }
 };

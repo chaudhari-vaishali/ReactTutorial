@@ -8,7 +8,7 @@ class UserEntryForm extends React.Component {
   }
   
   /**
-   * Submit the user details
+   * [submitDetails description]
    * @return {[type]} [description]
    */
   submitDetails (){
@@ -32,6 +32,7 @@ class UserEntryForm extends React.Component {
                     address : document.getElementById("address").value, city: document.getElementById("city").value
                   }
         // console.log("Test data ++ ", dataIn );
+        console.log("Updated change",this.props)
         this.props.bottomUpData(dataIn);
     }    
   }
