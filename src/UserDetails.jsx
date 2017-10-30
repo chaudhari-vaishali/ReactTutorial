@@ -40,15 +40,15 @@ class UserDetails extends React.Component {
     }
     // Decorate with Bootstrap CSS
     return (
-      <div><h1> In details</h1>
-      <table className="table table-bordered table-hover" width="100%">
-        <thead>
-          {tableHeader}
-        </thead>
-        <tbody>
-          {tableBody}
-        </tbody>
-      </table>
+      <div>
+        <table className="table table-bordered table-hover" width="100%">
+          <thead>
+            {tableHeader}
+          </thead>
+          <tbody>
+            {tableBody}
+          </tbody>
+        </table>
       </div>
     );
   }

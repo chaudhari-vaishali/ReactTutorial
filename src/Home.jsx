@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import welcome_img from './welcome_img.png'
 
 /**
  * Home Component
@@ -9,8 +10,11 @@ class Home extends Component {
       super(props);
     console.log("inhome")
   }
-  render(){ return(    
-                <h1>routed page</h1>
+  render(){ return(
+        <div>
+          <h1>Welcome to react route.</h1>
+          <img src= {welcome_img} alt="welcome_img"/>
+        </div>
       )
   }
 }

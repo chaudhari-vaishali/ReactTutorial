@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import LeftSideMenu from './LeftSideMenu.jsx';
+import {Route, Switch, withRouter} from 'react-router-dom';
+
+import AboutUs from './AboutUs.jsx';
+import Contact from './UserDetails.jsx';
+import Home from './Home.jsx';
 // import UserEntryForm from './UserEntryForm.jsx';
 // import UserDetails from './UserDetails.jsx';
 /**
@@ -24,7 +29,11 @@ class App extends Component {
           </div>
           <div className="col-10 col-sm-10 col-sm-10 right-container">
             <div className="row">
-            {this.props.children}             
+              <Switch>
+                <Route exact path='/home' component={Home}></Route>
+                <Route path='/contact' component={Contact}></Route>
+                <Route path='/aboutus' component={AboutUs}></Route>
+              </Switch>
             </div>
           </div>
         </div>
@@ -33,4 +42,5 @@ class App extends Component {
   }
 }
 
-export default App;
+
+export default withRouter(App);
