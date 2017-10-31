@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import UserEntryForm from './UserEntryForm.jsx';
-import UserDetails from './UserDetails.jsx';
 
 /**
  * App Component
@@ -15,6 +14,9 @@ class AboutUs extends Component {
       this.updateDetails.bind(this);
   }
 
+  redirectToContact() {
+    this.props.history.push("/contact");
+  }
   /**
    * CheckCall
    * @param  {[type]} test [description]
@@ -23,7 +25,7 @@ class AboutUs extends Component {
   checkUserUpdate = (test) => {
     // console.log("Checking call back is working", test);
     this.setState({formData:{first_name:test.first_name, last_name:test.last_name}});
-    this.updateDetails(test)
+    this.updateDetails(test);
   }
 
   /**
@@ -33,8 +35,11 @@ class AboutUs extends Component {
    */
   updateDetails = (test) => {
     this.state.userDetails.push(test);
-    this.setState({userDetails: this.state.userDetails});    
-    // console.log("in update UserDetails", this.state.formsData);
+    this.setState({userDetails: this.state.userDetails});
+    localStorage.setItem("userDetails", JSON.stringify(this.state.userDetails));
+    this.redirectToContact()
+    // console.log("set localstorage UserDetails", this.state.userDetails);
+
   }
 
   /**
@@ -44,11 +49,8 @@ class AboutUs extends Component {
     return(
     <div>
       <div className="col-3 col-sm-3 col-md-3">
-        <UserEntryForm topDownData={this.state.formData.first_name 
-      + ' ' +this.state.formData.last_name} bottomUpData={this.checkUserUpdate} />
-      </div>          
-      <div className="col-7 col-sm-7 col-md-7">
-        <UserDetails topDownrows={this.state.userDetails} />
+        {this.state.userDetails}
+        <UserEntryForm getFormData={this.checkUserUpdate}/>
       </div>
     </div>
     );

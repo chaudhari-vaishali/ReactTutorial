@@ -2,17 +2,17 @@ import React from 'react';
 import './App.css';
 
 class UserDetails extends React.Component {
-  render(){
-    // console.log("in appdetails: ",this.props.topDownrows);
 
+  render(){
     // Check userlist status.
-    if(this.props.topDownrows){
-      var userlist = this.props.topDownrows;
+    if(this.props.tableInputData){
+      var userlist = this.props.tableInputData;
+      console.log(userlist);
       if(userlist.length > 0){
         // Table Header
         var dataColumns = [{'first_name': 'First Name', 'last_name':'Last Name','phone':'Phone','email':'Email','address':'Address', 'city':'City'}];  
         // Table Row Data
-        var dataRows = userlist;
+        var dataRows = JSON.parse(userlist);
         // Render Header      
         var tableHeader= dataColumns.map(function(column,index) {
           return (
@@ -41,6 +41,7 @@ class UserDetails extends React.Component {
     // Decorate with Bootstrap CSS
     return (
       <div>
+        <button onClick={this.props.triggerCounter}>Update counter</button>
         <table className="table table-bordered table-hover" width="100%">
           <thead>
             {tableHeader}

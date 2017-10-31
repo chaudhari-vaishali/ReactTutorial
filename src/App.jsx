@@ -4,7 +4,7 @@ import LeftSideMenu from './LeftSideMenu.jsx';
 import {Route, Switch, withRouter} from 'react-router-dom';
 
 import AboutUs from './AboutUs.jsx';
-import Contact from './UserDetails.jsx';
+import Contact from './ContactUs.jsx';
 import Home from './Home.jsx';
 // import UserEntryForm from './UserEntryForm.jsx';
 // import UserDetails from './UserDetails.jsx';

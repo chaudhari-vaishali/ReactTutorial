@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.css';
 
+import { withRouter } from 'react-router';
+
+
 class UserEntryForm extends React.Component {
   constructor(props) {
     super();
     this.state = {errorMsg:'',options:['Pune','Nashik', 'Mumbai']};
   }
-  
+
   /**
    * [submitDetails description]
    * @return {[type]} [description]
@@ -32,8 +35,8 @@ class UserEntryForm extends React.Component {
                     address : document.getElementById("address").value, city: document.getElementById("city").value
                   }
         // console.log("Test data ++ ", dataIn );
-        console.log("Updated change",this.props)
-        this.props.bottomUpData(dataIn);
+        // console.log("Updated change",this.props)
+        this.props.getFormData(dataIn);
     }    
   }
   /**
@@ -85,9 +88,10 @@ class UserEntryForm extends React.Component {
         </select> <br />
         <button className="btn btn-primary btn-md col-md-4" onClick={()=>this.submitDetails()}>Submit</button>
         <button className="btn btn-warning btn-md col-md-4 margin-left-1" onClick={()=>this.resetForm()}>Reset</button>
+        
       </div>
     )
   }
 }
 
-export default UserEntryForm;
+export default  withRouter(UserEntryForm);

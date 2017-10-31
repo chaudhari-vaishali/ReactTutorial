@@ -15,11 +15,10 @@ class LeftSideMenu extends React.Component {
               <Link to="/home" className="nav-link">Home</Link>              
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/contact">Contact</a>
+              <a className="nav-link" href="/aboutus">About US</a>
             </li>
             <li className="nav-item">
-              
-              <a className="nav-link" href="/aboutus">About US</a>
+              <a className="nav-link" href="/contact">Contact</a>
             </li>
           </ul>
         </nav>
