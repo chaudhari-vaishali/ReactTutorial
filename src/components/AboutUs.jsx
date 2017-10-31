@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../style/App.css';
 import UserEntryForm from './UserEntryForm.jsx';
 
 /**
@@ -8,15 +8,17 @@ import UserEntryForm from './UserEntryForm.jsx';
 class AboutUs extends Component {
   constructor() {
       super();
-      console.log("inabout");
+      // console.log("inabout");
       this.state = {formData:{first_name:'', last_name:'', phone:'', email:'', address:'', city:''}, userDetails:[]};
       this.checkUserUpdate.bind(this);
       this.updateDetails.bind(this);
   }
-
+  
+  // Redirect page to contact
   redirectToContact() {
     this.props.history.push("/contact");
   }
+
   /**
    * CheckCall
    * @param  {[type]} test [description]

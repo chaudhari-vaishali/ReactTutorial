@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import UserDetails from './UserDetails.jsx';
 /**
  * App Component
@@ -14,9 +13,17 @@ class Contact extends Component {
     this.getTableData();
 
   }
+
+  /**
+   *  Update Counter 
+   */
   updateCounter(){
     this.setState({counter:this.state.counter+1});   
   }
+
+  /**
+   * Get table data through local storage
+   */
   getTableData(){
     this.tableData = localStorage.getItem("userDetails");
     // console.log("get localStorage UserDetails", JSON.parse(this.tableData));

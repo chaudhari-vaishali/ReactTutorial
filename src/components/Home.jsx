@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
-import welcome_img from './welcome_img.png'
+import welcome_img from '../images/welcome_img.png'
 
 /**
  * Home Component
@@ -8,8 +7,11 @@ import welcome_img from './welcome_img.png'
 class Home extends Component {
   constructor(props) {
       super(props);
-    console.log("inhome")
+    // console.log("inhome")
   }
+  /**
+   * Render home page
+   */
   render(){ return(
         <div>
           <h1>Welcome to react route.</h1>

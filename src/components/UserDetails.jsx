@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import '../style/App.css';
 
 class UserDetails extends React.Component {
 
@@ -7,7 +7,7 @@ class UserDetails extends React.Component {
     // Check userlist status.
     if(this.props.tableInputData){
       var userlist = this.props.tableInputData;
-      console.log(userlist);
+      // console.log(userlist);
       if(userlist.length > 0){
         // Table Header
         var dataColumns = [{'first_name': 'First Name', 'last_name':'Last Name','phone':'Phone','email':'Email','address':'Address', 'city':'City'}];  

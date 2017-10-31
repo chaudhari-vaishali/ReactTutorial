@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import './App.css';
+import '../style/App.css';
 
 /**
  * App Left Menu Component
@@ -11,14 +11,14 @@ class LeftSideMenu extends React.Component {
        <div className = "App-left-menu">
        <nav className="hidden-xs-down bg-faded sidebar">
           <ul className="nav flex-column">
-            <li className="nav-item">
-              <Link to="/home" className="nav-link">Home</Link>              
+            <li className="nav-item active" >
+              <Link to="/home" className="nav-link active">Home</Link>              
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/aboutus">About US</a>
+              <Link to="/aboutus" className="nav-link active">About US</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/contact">Contact</a>
+              <Link to="/contact" className="nav-link active">Contact</Link>
             </li>
           </ul>
         </nav>
